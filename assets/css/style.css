@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+body {
+    display: grid;
+    /*grid:
+    "header header header header header" 1fr
+    "aside main main main main" 1fr
+    "aside main main main main" 1fr
+    "aside main main main main" 1fr
+    / 1fr 1fr 1fr 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 56px 300px 300px 300px;
+    grid-template-areas: "header header header header header" 
+    "aside main main main main" 
+    "aside main main main main"
+    "aside main main main main";
+}
+
+header {
+    grid-area: header;
+    grid-column: 1 / span 5;
+    grid-row: 1 / 1;
+    display: flex;
+    justify-content: space-between;      
+    padding-top: 2px;
+    background-color: white;
+    height: 56px;
+    align-items: center;
+}
+
+.logos {
+    padding-left: 24px;
+}
+
+.logos img {
+    margin-left: 25px;
+}
+
+.user {
+    padding-right: 24px;
+    position: relative;
+    left: auto;
+}
+
+.user img {
+    margin-right: 14px;
+}
+
+main {
+    grid-area: main;
+    grid-column: 2 / span 4;
+    grid-row: 2 / span 4;
+    background: rgb(245, 245, 245);
+    padding-top: 20px;
+
+}
+
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+aside {
+    grid-area: aside;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 3;
+    background: white;
+    padding-top: 24px;
+    padding-left: 24px;
+}
+
+.list-aside li {
+    margin-bottom: 22px;
+}
+
